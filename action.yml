@@ -20,7 +20,7 @@ outputs:
 
 runs:
   using: docker
-  image: vdsm/virtual-dsm:7.14
+  image: docker://vdsm/virtual-dsm:7.14
   env:
     DISK_SIZE: ${{ inputs.disk-size }}
     DSM_PORT: ${{ inputs.port }}
