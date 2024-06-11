@@ -8,6 +8,10 @@ inputs:
     description: "Disk size for Virtual DSM"
     required: false
     default: "1G"
+  port:
+    description: "Port number for Virtual DSM"
+    required: false
+    default: "5000"
 
 # Define your outputs here.
 outputs:
@@ -18,5 +22,5 @@ runs:
   using: docker
   image: vdsm/virtual-dsm:7.14
   env:
-    DISK_SIZE: ${{ inputs.who-to-greet }}
-    DSM_PORT: ${{ steps.random-port.outputs.port }}
+    DISK_SIZE: ${{ inputs.disk-size }}
+    DSM_PORT: ${{ inputs.port }}
