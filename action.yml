@@ -1,21 +1,22 @@
-name: Hello, World!
-description: Greet someone and record the time
-author: GitHub Actions
+name: Virtual DSM
+description: Run Virtual DSM on GitHub Actions
+author: Synology Community
 
 # Define your inputs here.
 inputs:
-  who-to-greet:
-    description: Who to greet
-    required: true
-    default: World
+  disk-size:
+    description: "Disk size for Virtual DSM"
+    required: false
+    default: "1G"
 
 # Define your outputs here.
 outputs:
-  time:
-    description: The time we greeted you
+  port:
+    description: Port number for Virtual DSM
 
 runs:
   using: docker
-  image: Dockerfile
+  image: vdsm/virtual-dsm:7.14
   env:
-    INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
+    DISK_SIZE: ${{ inputs.who-to-greet }}
+    DSM_PORT: ${{ steps.random-port.outputs.port }}

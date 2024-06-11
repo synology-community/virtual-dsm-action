@@ -1,4 +1,4 @@
-# Hello, World! Docker Action
+# Synology VDSM Action
 
 [![GitHub Super-Linter](https://github.com/actions/hello-world-docker-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
 ![CI](https://github.com/actions/hello-world-docker-action/actions/workflows/ci.yml/badge.svg)
