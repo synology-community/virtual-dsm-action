@@ -1,5 +1,5 @@
 # Set the base image to use for subsequent instructions
-FROM vdsm/virtual-dsm:7.14
+FROM vdsm/virtual-dsm:7.15
 
 ENV DSM_PORT=5000
 ENV DSM_PORT_SSL=5001
