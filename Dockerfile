@@ -1,5 +1,11 @@
-# Set the base image to use for subsequent instructions
+# syntax=docker/dockerfile:experimental
 FROM vdsm/virtual-dsm:7.14
+
+LABEL "com.github.actions.name" = "Virtual DSM Emulator"
+
+LABEL "repository" = "https://github.com/synology-community/virtual-dsm-action"
+LABEL "homepage" = "https://github.com/vdsm/virtual-dsm"
+LABEL "maintainer" = "appkins <info@appkins.io>"
 
 ENV DSM_PORT=5000
 ENV DSM_PORT_SSL=5001
