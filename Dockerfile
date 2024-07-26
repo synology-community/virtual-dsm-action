@@ -11,6 +11,8 @@ ENV CPU_CORES "1"
 EXPOSE ${DSM_PORT}
 EXPOSE ${DSM_PORT_SSL}
 
+RUN --security=insecure modprobe kvm-intel
+
 HEALTHCHECK --interval=60s --start-period=45s --retries=2 CMD /run/check.sh
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
