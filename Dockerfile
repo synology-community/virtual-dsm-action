@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM vdsm/virtual-dsm:7.14
+FROM vdsm/virtual-dsm:7.15
 
 LABEL "com.github.actions.name" = "Virtual DSM Emulator"
 
